@@ -1,0 +1,23 @@
+public class TestCagnotte{
+   public static void main( String args[])
+   {
+      Cagnotte c1=new Cagnotte("Week-end à Rome",1500);
+      System.out.println(c1.getProjet());
+      c1.setjeParticipe(150);
+      System.out.println(c1.getBudget( ));
+      c1.setjeParticipe(205);
+      System.out.println(c1.getBudget( ));
+      c1.setjeParticipe(50);
+      System.out.println(c1.getjeParticipe());
+      c1.afficheCagnotte( );
+      Cagnotte c2= new Cagnotte("Resto",  250 );
+      c2.afficheCagnotte( );
+      Cagnotte c3= new Cagnotte("IPHONE Agatte",  250 );
+      c3.setjeParticipe(50);
+      c1.setjeParticipe(600);
+      c3.afficheCagnotte( );
+   
+    
+   }
+}
+

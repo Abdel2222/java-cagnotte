@@ -1,0 +1,58 @@
+public class Cagnotte {
+    private String projet;
+    private  int OBJECTIF;
+    private int budget;
+    private int nbParticipant;
+
+    public Cagnotte(String projet, int OBJECTIF) {
+        this.projet = projet;
+        this.OBJECTIF = OBJECTIF;
+        this.nbParticipant=0;
+        this.budget=0;
+    }
+
+
+    public void jeParticipe(int p){
+        this.budget+=p;
+        this.nbParticipant++;
+    }
+
+
+    public void afficheCagnotte() {
+        System.out.println("CAGHNOTTE " + this.projet);
+
+        System.out.println(this.budget + " EUR collectés sur " + this.OBJECTIF);
+        int per = (this.budget * 100) / this.OBJECTIF;
+        System.out.println(per + " %");
+        if (this.budget > 0) {
+                  int x= (20 * per) / 100;
+                for (int j = 0; j < x; j++) {
+
+                    System.out.print("*");
+                }
+            for (int i = x; i < 20; i++) {
+                System.out.print("-");
+            }
+
+
+        }
+        else for(int i = 0; i < 20; i++){
+            System.out.print("-");
+        }
+        System.out.print("\n");
+
+        System.out.println(this.nbParticipant+" participants");
+    }
+
+    public String getProjet() {
+        return projet;
+    }
+
+    public int getOBJECTIF() {
+        return OBJECTIF;
+    }
+
+    public int getBudget() {
+        return budget;
+    }
+}
